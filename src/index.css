@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  --color-primary: #0F172A;
+  --color-secondary: #1E293B;
+  --color-accent: #F59E0B;
+  --color-surface: #F8FAFC;
+  --color-border-custom: #E5E7EB;
+  --color-text-main: #111827;
+  --color-text-muted: #6B7280;
+}
+
+/* Custom Base resets */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #F8FAFC;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Utility Classes */
+.font-heading {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+}
+
+.font-body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+}
+
+.glass-panel {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(229, 231, 235, 0.8) !important;
+}
+
+.glass-dark {
+  background-color: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.shadow-soft {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+.shadow-hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Photobooth Photo Filters */
+.filter-normal {
+  filter: none;
+}
+
+.filter-bw {
+  filter: grayscale(100%) contrast(110%);
+}
+
+.filter-sepia {
+  filter: sepia(60%) contrast(105%) brightness(95%);
+}
+
+.filter-vintage {
+  filter: sepia(30%) contrast(120%) brightness(90%) hue-rotate(-10deg) saturate(120%);
+}
+
+.filter-warm {
+  filter: sepia(20%) saturate(140%) brightness(102%) hue-rotate(-5deg);
+}
+
+.filter-cool {
+  filter: hue-rotate(15deg) saturate(110%) brightness(105%) contrast(102%);
+}
+
+.filter-soft-glow {
+  filter: brightness(108%) contrast(92%) saturate(115%) blur(0.3px);
+}
+
+.filter-cyberpunk {
+  filter: contrast(130%) saturate(180%) hue-rotate(290deg);
+}
+
+/* Flash animation */
+@keyframes flashAnimation {
+  0% { opacity: 0; }
+  30% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.animate-flash {
+  animation: flashAnimation 0.4s ease-out forwards;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
